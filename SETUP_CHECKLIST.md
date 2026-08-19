@@ -1,4 +1,4 @@
-# Indiekit Setup Checklist
+# Indiekit setup checklist
 
 ## ✅ Completed
 
