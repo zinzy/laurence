@@ -32,26 +32,34 @@ const config = {
   /**
    * Preset Hugo options (paths, URLs, and front matter format)
    */
+
   '@indiekit/preset-hugo': {
-    frontMatterFormat: 'yaml',
-    postTypes: {
-      article: {
+  frontMatterFormat: 'yaml',
+  postTypes: {
+    article: {
+      post: {
         path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md',
         url: '{yyyy}/{MM}/{dd}/{slug}/',
       },
-      note: {
+    },
+    note: {
+      post: {
         path: 'content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
         url: 'notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
       },
-      like: {
+    },
+    like: {
+      post: {
         path: 'content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
         url: 'likes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
       },
-      photo: {
+    },
+    photo: {
+      post: {
         path: 'content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
         url: 'photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
-      }
-    }
+      },
+    },
   },
 
   /**
