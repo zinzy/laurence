@@ -48,19 +48,24 @@ const config = {
     // This tells Indiekit exactly where to put your files
     postTypes: {
       article: {
-        path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md'
+        path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: '{yyyy}/{MM}/{dd}/{slug}.md',
       },
       note: {
-        path: 'content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+        path: 'content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
+        url: 'notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}.md',
       },
       like: {
-        path: 'content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+        path: 'content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
+        url: 'likes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}.md',
       },
       photo: {
-        path: 'content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+        path: 'content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
+        url: 'photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}.md',
       }
     }
   },
+
 
   /**
    * Mastodon syndicator options
