@@ -19,7 +19,9 @@ const config = {
   publication: {
     me: process.env.PUBLICATION_URL,
     
-    // Hugo-specific paths and URLs must be defined here so Indiekit uses them
+// Hugo preset paths and formatting MUST live under the plugin's name block like this:
+  '@indiekit/preset-hugo': {
+    frontMatterFormat: 'yaml',
     postTypes: {
       article: {
         path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md',
@@ -38,6 +40,7 @@ const config = {
         url: 'photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
       }
     }
+  },
   },
 
   /**
