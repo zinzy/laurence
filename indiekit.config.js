@@ -26,8 +26,8 @@ const config = {
    * Publication options
    */
   publication: {
-    me: process.env.PUBLICATION_URL,
-        frontMatterFormat: "yaml",
+    me: "process.env.PUBLICATION_URL",
+    frontMatterFormat: "yaml",
     postTypes: {
       article: {
         post: {
@@ -37,7 +37,7 @@ const config = {
       },
       note: {
         post: {
-          path: "content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          path: "content/notes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
           url: "notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
         },
       },
@@ -53,7 +53,7 @@ const config = {
           url: "photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
         },
       },
-  },
+    },
  
 
   /**
