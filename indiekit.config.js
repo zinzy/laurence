@@ -47,10 +47,18 @@ const config = {
   '@indiekit/preset-hugo': {
     // This tells Indiekit exactly where to put your files
     postTypes: {
-      article: 'content/posts',   // Matches content/posts/ in your repo
-      note: 'content/micro',      // Matches content/notes/ in your repo
-      like: 'content/likes',      // Matches content/likes/ in your repo
-      photo: 'content/photos'     // Matches content/photos/ in your repo
+      article: {
+        path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md'
+      },
+      note: {
+        path: 'content/notes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+      },
+      like: {
+        path: 'content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+      },
+      photo: {
+        path: 'content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+      }
     }
   },
 
