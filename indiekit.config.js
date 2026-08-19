@@ -8,18 +8,11 @@ const config = {
    * Plug-ins
    */
   plugins: [
-    '@indiekit/preset-hugo', 
+    "@indiekit/preset-hugo", 
     "@indiekit/store-github",
     "@indiekit/syndicator-mastodon",
   ],
-
-  /**
-   * Publication options
-   */
-  publication: {
-    me: process.env.PUBLICATION_URL,
-  },
-
+  
   /**
    * GitHub content store options
    */
@@ -30,38 +23,72 @@ const config = {
   },
 
   /**
+   * Publication options
+   */
+  publication: {
+    me: process.env.PUBLICATION_URL,
+        frontMatterFormat: "yaml",
+    postTypes: {
+      article: {
+        post: {
+          path: "content/posts/{yyyy}-{MM}-{dd}-{slug}.md",
+          url: "{yyyy}/{MM}/{dd}/{slug}/",
+        },
+      },
+      note: {
+        post: {
+          path: "content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          url: "notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+        },
+      },
+      like: {
+        post: {
+          path: "content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          url: "likes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+        },
+      },
+      photo: {
+        post: {
+          path: "content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          url: "photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+        },
+      },
+  },
+ 
+
+  /**
    * Preset Hugo options (paths, URLs, and front matter format)
    */
 
-  '@indiekit/preset-hugo': {
-  frontMatterFormat: 'yaml',
-  postTypes: {
-    article: {
-      post: {
-        path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: '{yyyy}/{MM}/{dd}/{slug}/',
-      },
-    },
-    note: {
-      post: {
-        path: 'content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
-        url: 'notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
-      },
-    },
-    like: {
-      post: {
-        path: 'content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
-        url: 'likes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
-      },
-    },
-    photo: {
-      post: {
-        path: 'content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md',
-        url: 'photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/',
-      },
-    },
+  // "@indiekit/preset-hugo": {
+  //   frontMatterFormat: "yaml",
+  //   postTypes: {
+  //     article: {
+  //       post: {
+  //         path: "content/posts/{yyyy}-{MM}-{dd}-{slug}.md",
+  //         url: "{yyyy}/{MM}/{dd}/{slug}/",
+  //       },
+  //     },
+  //     note: {
+  //       post: {
+  //         path: "content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+  //         url: "notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+  //       },
+  //     },
+  //     like: {
+  //       post: {
+  //         path: "content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+  //         url: "likes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+  //       },
+  //     },
+  //     photo: {
+  //       post: {
+  //         path: "content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+  //         url: "photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+  //       },
+  //     },
+  //   },
   },
-},
 
   /**
    * Mastodon syndicator options
