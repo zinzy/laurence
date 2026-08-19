@@ -52,7 +52,7 @@ const config = {
       like: 'content/likes',      // Matches content/likes/ in your repo
       photo: 'content/photos'     // Matches content/photos/ in your repo
     }
-  }
+  },
 
   /**
    * Mastodon syndicator options
