@@ -51,6 +51,9 @@ const config = {
         post: {
           path: "content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.md",
           url: "photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
+          media: {
+            path: "img/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}"
+          }
         },
       },
     },
