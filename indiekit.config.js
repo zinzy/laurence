@@ -18,8 +18,20 @@ const config = {
    */
   publication: {
     me: process.env.PUBLICATION_URL,
-    
-// Hugo preset paths and formatting MUST live under the plugin's name block like this:
+  },
+
+  /**
+   * GitHub content store options
+   */
+  "@indiekit/store-github": {
+    user: process.env.GITHUB_USER,
+    repo: process.env.GITHUB_REPO,
+    branch: process.env.GITHUB_BRANCH,
+  },
+
+  /**
+   * Preset Hugo options (paths, URLs, and front matter format)
+   */
   '@indiekit/preset-hugo': {
     frontMatterFormat: 'yaml',
     postTypes: {
@@ -41,22 +53,14 @@ const config = {
       }
     }
   },
-  },
 
   /**
-   * GitHub content store options
+   * Mastodon syndicator options
    */
-  "@indiekit/store-github": {
-    user: process.env.GITHUB_USER,
-    repo: process.env.GITHUB_REPO,
-    branch: process.env.GITHUB_BRANCH,
-  },
-
-  /**
-   * Preset Hugo options (front matter format, etc.)
-   */
-  '@indiekit/preset-hugo': {
-    frontMatterFormat: 'yaml', // or 'json' / 'toml' depending on your Hugo setup
+  "@indiekit/syndicator-mastodon": {
+    checked: true,
+    url: process.env.MASTODON_URL,
+    user: process.env.MASTODON_USER,
   }
 };
 
