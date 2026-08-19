@@ -27,7 +27,8 @@
     "@indiekit/indiekit": "^1.0.0-beta",
     "@indiekit/preset-jekyll": "^1.0.0-beta",
     "@indiekit/store-github": "^1.0.0-beta",
-    "@indiekit/syndicator-mastodon": "^1.0.0-beta"
+    "@indiekit/syndicator-mastodon": "^1.0.0-beta",
+    "dotenv": "^16.0.0"
   },
   "engines": {
     "node": ">=20"
