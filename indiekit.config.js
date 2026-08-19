@@ -26,7 +26,7 @@ const config = {
    * Publication options
    */
   publication: {
-    me: "process.env.PUBLICATION_URL",
+    me: process.env.PUBLICATION_URL,
     frontMatterFormat: "yaml",
     postTypes: {
       article: {
