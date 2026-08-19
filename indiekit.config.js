@@ -37,19 +37,19 @@ const config = {
       },
       note: {
         post: {
-          path: "content/notes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          path: "content/notes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.md",
           url: "notes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
         },
       },
       like: {
         post: {
-          path: "content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          path: "content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.md",
           url: "likes/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
         },
       },
       photo: {
         post: {
-          path: "content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md",
+          path: "content/photos/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}.md",
           url: "photos/{yyyy}/{MM}/{dd}/{HH}/{mm}/{ss}/",
         },
       },
