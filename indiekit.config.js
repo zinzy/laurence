@@ -15,9 +15,20 @@ const config = {
    */
   plugins: [
     "@indiekit/preset-jekyll",
+    '@indiekit/preset-hugo', 
     "@indiekit/store-github",
     "@indiekit/syndicator-mastodon",
   ],
+
+  '@indiekit/preset-hugo': {
+    // This tells Indiekit exactly where to put your files
+    postTypes: {
+      article: 'content/posts',   // Matches content/posts/ in your repo
+      note: 'content/micro',      // Matches content/notes/ in your repo
+      like: 'content/likes',      // Matches content/likes/ in your repo
+      photo: 'content/photos'     // Matches content/photos/ in your repo
+    }
+  }
 
   /**
    * Publication options
