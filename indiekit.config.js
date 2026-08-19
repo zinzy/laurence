@@ -51,7 +51,7 @@ const config = {
         path: 'content/posts/{yyyy}-{MM}-{dd}-{slug}.md'
       },
       note: {
-        path: 'content/notes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
+        path: 'content/micro/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
       },
       like: {
         path: 'content/likes/{yyyy}-{MM}-{dd}-{HH}-{mm}-{ss}-{slug}.md'
